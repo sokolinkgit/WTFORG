@@ -420,23 +420,6 @@
     yearEl.textContent = currentYear > 2026 ? currentYear : 2026;
   }
 
-  /* ---------------------------------------------------------
-     11. Hero seal gentle parallax (pointer, desktop only)
-     --------------------------------------------------------- */
-  var seal = $(".hero-seal");
-  var heroVisual = $(".hero__visual");
-  if (seal && heroVisual && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {
-    heroVisual.addEventListener("mousemove", function (e) {
-      var rect = heroVisual.getBoundingClientRect();
-      var x = (e.clientX - rect.left) / rect.width - 0.5;
-      var y = (e.clientY - rect.top) / rect.height - 0.5;
-      // `translate` composes with the seal's rotate animation
-      seal.style.translate = (x * 14).toFixed(1) + "px " + (y * 12).toFixed(1) + "px";
-    });
-    heroVisual.addEventListener("mouseleave", function () {
-      seal.style.translate = "";
-    });
-  }
   /* Signal that progressive enhancement booted successfully */
   window.__hwdiReady = true;
 })();
