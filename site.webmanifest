@@ -1,0 +1,17 @@
+{
+  "name": "HWDI — Healing With Donnel Israel",
+  "short_name": "HWDI",
+  "description": "Healing people. Building an African institution. Five pillars, one ecosystem.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f3e8",
+  "theme_color": "#0a1e19",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
