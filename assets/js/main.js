@@ -137,7 +137,10 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         navLinks.forEach(function (l) {
-          l.classList.toggle("is-active", l.getAttribute("href") === "#" + entry.target.id);
+          var isCurrent = l.getAttribute("href") === "#" + entry.target.id;
+          l.classList.toggle("is-active", isCurrent);
+          if (isCurrent) l.setAttribute("aria-current", "true");
+          else l.removeAttribute("aria-current");
         });
       });
     }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });

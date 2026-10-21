@@ -980,6 +980,7 @@ em { font-style: italic; }
 .pillars .lede { color: var(--muted-light); }
 .pillars .section-head__note { color: rgba(232, 176, 75, 0.85); }
 .pillars .section-head { position: relative; }
+.pillars > .container { position: relative; z-index: 1; }
 
 .explorer {
   display: grid;
@@ -1310,6 +1311,8 @@ em { font-style: italic; }
   pointer-events: none;
 }
 .stats__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
@@ -1536,6 +1539,8 @@ em { font-style: italic; }
   pointer-events: none;
 }
 .sprint__inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: clamp(1.5rem, 5vw, 4.5rem);
