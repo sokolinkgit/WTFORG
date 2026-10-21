@@ -58,7 +58,25 @@ links in `index.html`.
 | 2026 sprint | The 28 core deliverables and the M-Changa campaign |
 | Founder | Founder's declaration and the founder-led → ecosystem-led progression |
 | Join | WhatsApp community CTA + membership interest form |
-| Contact | Phone, registration details, all social channels |
+| Contact | Phone, registration details, all social channels with brand icons |
+
+## Social icons
+
+Every platform is represented with an authentic brand glyph, defined once as an inline SVG
+sprite at the top of `index.html` (`#icon-facebook`, `#icon-instagram`, `#icon-tiktok`,
+`#icon-youtube`, `#icon-linkedin`, `#icon-x`, `#icon-whatsapp`) and reused with `<use>`.
+Brand colours live in CSS (`--brand-bg` on `.brand-*` classes), so no image files or icon
+libraries are needed.
+
+Icons appear in three places:
+
+1. **Contact section** — full list with tile icons, platform name, content type and link.
+2. **Footer** — a row of brand-coloured icon buttons, including WhatsApp.
+3. **Floating rail** (screens ≥ 1400px) — fixed vertical stack on the left with hover labels,
+   so social links stay one click away while scrolling.
+
+To add a platform, add a `<symbol>` to the sprite, a `.brand-<name> { --brand-bg: … }` rule,
+then reuse the markup pattern in the list, footer row and rail.
 
 ## Institutional accuracy
 
